@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .markdown-body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  .markdown-body h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    color: #0f172a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+  }
+  .markdown-body h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+  }
+  .markdown-body h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #334155;
+  }
+  .markdown-body p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+  }
+  .markdown-body blockquote {
+    border-left: 4px solid #f59e0b;
+    background-color: #fffbeb;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+    font-style: italic;
+    color: #92400e;
+  }
+  .markdown-body ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .markdown-body ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .markdown-body li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  .markdown-body hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 2.5rem 0;
+  }
+  .markdown-body code {
+    background-color: #f1f5f9;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    font-size: 0.875em;
+  }
+}
+
+@media print {
+  header, #ebook-form-container, #generation-progress, .no-print, button, nav {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: #0f172a !important;
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+  @page {
+    margin: 2cm;
+  }
+  .markdown-body h1 {
+    page-break-before: always;
+    font-size: 22pt;
+    color: #0f172a;
+    border-bottom: 2px solid #cbd5e1;
+    padding-bottom: 8pt;
+    margin-top: 0;
+  }
+  .markdown-body h1:first-of-type {
+    page-break-before: avoid;
+  }
+  .markdown-body h2 {
+    font-size: 16pt;
+    color: #1e293b;
+    margin-top: 18pt;
+  }
+  .markdown-body h3 {
+    font-size: 13pt;
+    color: #334155;
+  }
+  .markdown-body blockquote {
+    border-left: 4px solid #d97706 !important;
+    background-color: #fef3c7 !important;
+    color: #78350f !important;
+    padding: 10pt 14pt !important;
+    page-break-inside: avoid;
+  }
+  .markdown-body hr {
+    page-break-after: always;
+    visibility: hidden;
+  }
+}

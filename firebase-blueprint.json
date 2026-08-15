@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "User": {
+      "collectionName": "users",
+      "fields": {
+        "uid": { "type": "string", "required": true },
+        "email": { "type": "string", "required": true },
+        "displayName": { "type": "string", "required": false },
+        "role": { "type": "string", "required": true },
+        "status": { "type": "string", "required": true },
+        "maxEbooksQuota": { "type": "number", "required": true },
+        "ebooksCount": { "type": "number", "required": true },
+        "createdAt": { "type": "string", "required": true },
+        "lastLoginAt": { "type": "string", "required": true }
+      }
+    },
+    "Ebook": {
+      "collectionName": "ebooks",
+      "fields": {
+        "userId": { "type": "string", "required": true },
+        "userEmail": { "type": "string", "required": true },
+        "createdAt": { "type": "string", "required": true },
+        "updatedAt": { "type": "string", "required": true },
+        "input": { "type": "map", "required": true },
+        "outline": { "type": "map", "required": false },
+        "introduction": { "type": "string", "required": false },
+        "chapters": { "type": "array", "required": true },
+        "conclusion": { "type": "string", "required": false },
+        "coverTheme": { "type": "string", "required": false }
+      }
+    }
+  }
+}

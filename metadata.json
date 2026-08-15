@@ -1,0 +1,6 @@
+{
+  "name": "Gerador de E-books com I.A.",
+  "description": "Gerador independente de e-books em formato Markdown/TXT com Inteligência Artificial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
